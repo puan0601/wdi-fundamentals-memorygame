@@ -7,15 +7,16 @@ console.log("JS file is connected to HTML! Woo!");
 
 var isMatch = function(cards) {
   if (cards[0] === cards[1]) {
-    return true;
+    alert("Yay! You win!");
+
   } else {
-    return false;
+    alert("Yay! You LOSE!")
   }
   // for (var i = 0; i < cards.length)
 }
 
 var gameBoard = document.getElementById('game-board');
-var cards = ['queen', 'queen', 'king', 'king'];
+var cards = shuffleArray(['queen', 'queen', 'king', 'king']);
 var cardsInPlay = [];
 
 var createCards = function() {
@@ -47,6 +48,16 @@ function isTwoCards() {
     isMatch(cardsInPlay);
     cardsInPlay = [];
   }
+}
+
+function shuffleArray(array) {
+    for (var i = array.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+    }
+    return array;
 }
 
 createCards();
