@@ -2,7 +2,7 @@
 comment. Add your CSS code
 from Unit 1 - 5 below  */
 
-.board {
+#game-board {
   height: 50%;
   width: 50%;
   display: inline-block;
@@ -13,7 +13,9 @@ from Unit 1 - 5 below  */
   width: 150px;
   border: 1px solid black;
   border-radius: 10px;
-  background: yellow;
+  background-image: url("background.png");
+  /*background-position: center;*/
+  background-size: cover;
   float: left;
   margin: 8%;
 }
@@ -61,4 +63,9 @@ footer {
 
 nav a:hover {
   background-color: #ee5f3c;
+}
+
+img {
+  height: 200px;
+  width: 150px;
 }
